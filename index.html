@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon for the website, displayed in browser tabs -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Link to the compiled Tailwind CSS file for styling -->
+  <link rel="stylesheet" href="dist/output.css">
+
+  <!-- Link to Google Fonts for Barlow and Fraunces -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div>
+
+    <!-- Hero background image -->
+    <div class="relative w-full">
+      <!-- Desktop image -->
+      <img src="images/desktop/image-header.jpg" alt="Header Image" class="hidden md:block w-full h-auto object-cover">
+
+      <!-- Mobile image -->
+       <img src="images/mobile/image-header.jpg" alt="Header Image" class="block md:hidden w-full h-auto object-cover">
+
+    </div>
+
+    <!-- Navigation bar -->
+    <nav class="w-full top-0 absolute">
+      <div class="container mx-auto px-10 py-12 flex item-center justify-between">
+
+        <!-- Logo image -->
+        <img class="object-contain" src="images/logo-hero.svg">
+
+        <!-- Hamburger icon for mobile -->
+         <div class="md:hidden">
+          <img id="hamburger" src="images/icon-hamburger.svg" alt="Menu" class="cursor-pointer">
+         </div>
+
+         <!-- Mobile menu (initially hidden) -->
+         <div id="mobile-menu" class="hidden bg-white text-dark-grayish-blue absolute top-20 right-5 1/3 py-2 px-4 rounded-xl border">
+          <ul class="flex flex-col items-center space-y-4">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
+
+        <!-- JavaScript to toggle the mobile menu -->
+        <script>
+          const hamburger = document.getElementById('hamburger');
+          const mobileMenu = document.getElementById('mobile-menu');
+
+          hamburger.addEventListener('click', () => {
+            // Toggle the 'hidden' class to show/hide the mobile menu
+            mobileMenu.classList.toggle('hidden');
+          });
+        </script>
+
+         <!-- Navigation links (hidden on mobile, visible on desktop) -->
+        <ul class="hidden md:flex space-x-10 text-white">
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Projects</a>
+          </li>
+          <li>
+            <a href="#" class="font-fraunces text-very-dark-desaturated-blue text-lg p-3 rounded-full bg-white font-bold">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main hero content section -->
+    <div class="absolute top-1/3 w-full flex flex-col items-center ">
+      <h1 class="font-fraunces text-5xl font-extrabold text-white text-center tracking-[0.2em]">WE ARE CREATIVES</h1>
+      <img src="images/icon-arrow-down.svg" class="mt-24">
+    </div>   
+    
+  </div>
+  
+
+  <!-- Transform your brand section -->
+  <!-- Section with two columns: text on left and image on right -->
+  <div class="w-full md:flex">
+
+    <!-- Mobile Image-->
+    <div class="block md:hidden w-full p-0 m-0">
+      <img src="images/mobile/image-transform.jpg" class="w-full h-full">
+    </div>
+
+    <!-- Text section -->
+    <div class="w-full md:w-1/2 flex flex-col justify-center items-center py-20 md:items-start md:pl-24">
+      
+      <h1 class="text-5xl font-bold mb-8 text-very-dark-desaturated-blue font-fraunces w-2/3 text-center md:text-left">Transform your brand</h1>
+  
+      <p class="mb-8 text-xl font-semibold w-3/4 text-dark-grayish-blue">
+        We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
+      </p>
+      
+      <h3 class="font-bold text-very-dark-desaturated-blue font-fraunces"><a href="#">LEARN MORE</a></h3>
+    </div>
+
+    <!-- Desktop Image-->
+    <div class="hidden md:block w-1/2 p-0 m-0">
+      <img src="images/desktop/image-transform.jpg" class="w-full h-full">
+    </div>
+  </div>
+
+  <!-- Stand out to the right audience section -->
+  <!-- Section with two columns: image on left and text on right -->
+  <div class="md:flex w-full">
+
+    <!-- Mobile Image-->
+    <div class="block md:hidden w-full p-0 m-0">
+      <img src="images/mobile/image-stand-out.jpg" class="w-full h-full">
+    </div>
+
+    <!-- Desktop Image-->
+    <div class="hidden md:block w-1/2 p-0 m-0">
+      <img src="images/desktop/image-stand-out.jpg" class="w-full h-full">
+    </div>
+
+    <!-- Text section -->
+    <div class="w-full md:w-1/2 flex flex-col justify-center items-center py-20 md:items-start md:pl-24">
+
+      <h1 class="text-5xl font-bold mb-8 text-very-dark-desaturated-blue font-fraunces w-1/2 md:w-3/4 text-center md:text-left">Stand out to the right audience</h1>
+  
+      <p class="mb-8 text-xl w-3/4 font-semibold text-dark-grayish-blue">
+        Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+      </p>
+      
+      <h3 class="font-bold text-very-dark-desaturated-blue font-fraunces"><a href="#">LEARN MORE</a></h3>
+    </div>
+  </div>
+
+  <!-- Section with two columns: image with text overlay on left and image with text overlay on right -->
+  <div class="md:flex w-full">
+
+    <!-- Section 1 -->
+    <div class="relative w-full h-full md:w-1/2 p-0 m-0">
+
+      <!-- Desktop Image-->
+      <img src="images/desktop/image-graphic-design.jpg" class="hidden md:block w-full h-[80vh] object-cover">
+
+      <!-- Mobile Image-->
+      <img src="images/mobile/image-graphic-design.jpg" class="block md:hidden w-full h-auto">
+
+      <!-- Text -->
+      <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 pb-16 text-center text-dark-desaturated-cyan">
+        <p class="font-bold text-3xl pb-5 font-fraunces">Graphic design</p>
+        <p class="text-lg font-semibold">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        </p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="relative w-full md:w-1/2 p-0 m-0">
+
+      <!-- Desktop Image-->
+      <img src="images/desktop/image-photography.jpg" class="hidden md:block w-full h-[80vh] object-cover">
+
+      <!-- Mobile Image-->
+      <img src="images/mobile/image-photography.jpg" class="block md:hidden w-full h-auto">
+
+      <!-- Text -->
+      <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 pb-16 text-center text-dark-blue">
+        <p class="font-bold text-3xl pb-5 font-fraunces">Photography</p>
+        <p class="text-lg font-semibold">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+        </p>
+      </div>
+    </div>
+
+  </div>
+  
+  <!-- Client testimonials section -->
+  <div>
+    <h2 class="text-xl font-bold pt-24 text-center text-grayish-blue font-fraunces tracking-[0.5em]">CLIENT TESTIMONIALS</h2>
+
+    <div class="md:flex p-10 md:p-20 md:gap-10">
+      <div class="flex flex-col items-center text-center">
+        <img src="images/image-emily.jpg" class="rounded-full">
+        <p class="py-10 text-very-dark-grayish-blue font-semibold font-barlow w-3/4">
+          We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+        </p>
+        <h3 class="pb-6 text-very-dark-desaturated-blue text-xl font-bold font-fraunces">Emily R.</h3>
+        <h4 class="text-grayish-blue font-barlow pb-16">Marketing Director</h4>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <img src="images/image-thomas.jpg" class="rounded-full">
+        <p class="py-10 text-very-dark-grayish-blue font-semibold font-barlow w-3/4">
+          Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
+        </p>
+        <h3 class="pb-6 text-very-dark-desaturated-blue text-xl font-bold font-fraunces">Thomas S.</h3>
+        <h4 class="text-grayish-blue font-barlow pb-16">Chief Operating Officer</h4>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <img src="images/image-jennie.jpg" class="rounded-full">
+        <p class="py-10 text-very-dark-grayish-blue font-semibold font-barlow w-3/4">
+          Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+        </p>
+        <h3 class="pb-6 text-very-dark-desaturated-blue text-xl font-bold font-fraunces">Jennie F.</h3>
+        <h4 class="text-grayish-blue font-barlow pb-16">Business Owner</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery section with four images -->
+  <!-- Desktop Images-->
+  <div class="hidden md:flex w-full">
+    <div class="w-1/4 p-0 m-0">
+      <img src="images/desktop/image-gallery-milkbottles.jpg" class="w-full h-full">
+    </div>
+
+    <div class="w-1/4 p-0 m-0">
+      <img src="images/desktop/image-gallery-orange.jpg" class="w-full h-full">
+    </div>
+
+    <div class="w-1/4 p-0 m-0">
+      <img src="images/desktop/image-gallery-cone.jpg" class="w-full h-full">
+    </div>
+
+    <div class="w-1/4 p-0 m-0">
+      <img src="images/desktop/image-gallery-sugarcubes.jpg" class="w-full h-full">
+    </div>
+  </div>
+
+  <!-- Gallery section with four images -->
+  <!-- Mobile Images-->
+  <div class="block md:hidden">
+    <div class="flex w-full">
+      <img src="images/mobile/image-gallery-milkbottles.jpg" class="w-1/2">
+      <img src="images/mobile/image-gallery-orange.jpg" class="w-1/2">
+    </div>
+
+    <div class="flex w-full">
+      <img src="images/mobile/image-gallery-cone.jpg" class="w-1/2">
+      <img src="images/mobile/image-gallery-sugar-cubes.jpg" class="w-1/2">
+    </div>
+  </div>
+
+  <!-- Footer section -->
+  <div class="bg-dark-moderate-cyan flex flex-col items-center py-20 w-full">
+    <img src="images/logo-footer.svg" class="object-contain">
+
+    <!-- Footer navigation links -->
+    <ul class="flex gap-10 pt-5 text-dark-desaturated-cyan">
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Services</a>
+      </li>
+      <li>
+        <a href="#">Projects</a>
+      </li>
+    </ul>
+    
+    <!-- Social media icons -->
+    <div class="flex space-x-5 py-10">
+      <a href="#">
+        <img src="images/icon-facebook.svg"> <!-- Facebook icon -->
+      </a>
+      <a href="#">
+        <img src="images/icon-instagram.svg"> <!-- Instagram icon -->
+      </a>
+      <a href="#">
+        <img src="images/icon-twitter.svg"> <!-- Twitter icon -->
+      </a>
+      <a href="#">
+        <img src="images/icon-pinterest.svg"> <!-- Pinterest icon -->
+      </a>
+    </div>
+
+    <div class="attribution text-dark-desaturated-cyan">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Derraa</a>.
+    </div>
+  </div>
+
+  
+</body>
+</html>
